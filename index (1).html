@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday, da ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--g1:#04140b;--g2:#0a2a18;--g3:#0f3d24;--pink:#ff7a9c;--red:#ff4d6d;--paper:#f6efe4;--ink:#2a2420;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:#030d07;color:#fff;font-family:Poppins,system-ui,sans-serif;overflow-x:hidden;min-height:100vh}
+#bg{position:fixed;inset:0;z-index:0;background:
+radial-gradient(ellipse 60% 40% at 15% 0%,rgba(255,250,220,.28),transparent 70%),
+radial-gradient(ellipse 60% 40% at 85% 0%,rgba(255,250,220,.28),transparent 70%),
+linear-gradient(180deg,#02070a 0%,#06150e 35%,var(--g2) 70%,var(--g1) 100%)}
+#bg::before{content:"";position:absolute;inset:auto 0 0 0;height:62%;opacity:.35;
+background:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 40px,transparent 40px 80px);
+-webkit-mask:linear-gradient(0deg,#000,transparent);mask:linear-gradient(0deg,#000,transparent)}
+#bg::after{content:"";position:absolute;left:50%;bottom:-18%;width:130vmin;height:130vmin;transform:translateX(-50%);
+border:2px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 1px rgba(255,255,255,.04)}
+.stars i{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.5;animation:tw 4s infinite}
+@keyframes tw{50%{opacity:.1}}
+#fx{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.heart{position:absolute;bottom:-30px;opacity:0;animation:rise linear forwards;will-change:transform,opacity}
+@keyframes rise{0%{transform:translate3d(0,0,0) scale(.7);opacity:0}12%{opacity:.7}85%{opacity:.5}100%{transform:translate3d(var(--dx),-112vh,0) scale(1.1);opacity:0}}
+.heart.glow{filter:drop-shadow(0 0 5px var(--pink))}
+.ball{position:absolute;font-size:16px;opacity:.28;animation:roll linear infinite;will-change:transform}
+@keyframes roll{from{transform:translateX(-40px) rotate(0)}to{transform:translateX(calc(100vw + 40px)) rotate(720deg)}}
+main{position:relative;z-index:2}
+section{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 18px;text-align:center}
+.eyebrow{letter-spacing:.35em;font-size:11px;text-transform:uppercase;color:#bfe9cf;opacity:.8}
+h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(44px,13vw,84px);line-height:1.05;margin:16px 0;text-shadow:0 0 30px rgba(255,255,255,.25)}
+h1 em{color:var(--pink);font-style:italic}
+.sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:#ffd9e2;max-width:320px}
+.pitchline{width:140px;height:70px;border:1.5px solid rgba(255,255,255,.55);border-radius:4px;position:relative;margin:26px auto 4px}
+.pitchline::before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:1.5px solid rgba(255,255,255,.55)}
+.pitchline::after{content:"⚽";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:22px;background:#0a2a18;border-radius:50%;padding:2px;line-height:1}
+.btn{margin-top:30px;background:linear-gradient(135deg,var(--red),var(--pink));color:#fff;border:0;border-radius:40px;padding:15px 34px;font:400 15px Poppins,sans-serif;box-shadow:0 0 24px rgba(255,77,109,.45);cursor:pointer}
+.hint{margin-top:34px;font-size:12px;opacity:.55;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+.vid{width:100%;max-width:440px;border-radius:18px;padding:6px;background:linear-gradient(135deg,rgba(255,255,255,.35),rgba(255,122,156,.35));box-shadow:0 0 40px rgba(255,255,255,.12)}
+.vid video{width:100%;border-radius:13px;display:block;background:#000;max-height:70vh}
+.cap{margin-top:16px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:#ffd9e2}
+.letter-wrap{padding:40px 14px}
+.card{position:relative;width:100%;max-width:520px;background:linear-gradient(180deg,#faf4ea,var(--paper));color:var(--ink);border-radius:10px;padding:34px 24px 38px;text-align:left;box-shadow:0 0 0 1px rgba(255,255,255,.4),0 20px 60px rgba(0,0,0,.6),0 0 60px rgba(255,200,120,.12)}
+.card::before{content:"";position:absolute;inset:8px;border:1.5px solid rgba(15,61,36,.35);border-radius:6px;pointer-events:none}
+.card .hd{text-align:center;font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600;color:#0f3d24;margin-bottom:22px}
+.card .hd span{display:block;font-size:20px;margin-bottom:2px}
+.card p{font-family:'Cormorant Garamond',serif;font-size:20.5px;line-height:1.6;margin-bottom:17px;font-weight:500;opacity:0;transform:translateY(12px);transition:opacity 1.2s ease,transform 1.2s ease;position:relative}
+.card p.in{opacity:1;transform:none}
+.card p.key{color:#9b1c3f;font-style:italic;font-size:22px;text-align:center;text-shadow:0 0 14px rgba(255,77,109,.35)}
+.card p.sign{text-align:center;font-weight:600;color:#0f3d24;font-size:22px}
+.mh{position:absolute;font-size:11px;opacity:0;pointer-events:none;animation:mh 2.6s ease-out forwards}
+@keyframes mh{0%{opacity:0;transform:translateY(0)}20%{opacity:.8}100%{opacity:0;transform:translateY(-34px)}}
+.final{position:relative}
+.scene{position:relative;width:min(88vw,380px);height:210px;margin-bottom:30px}
+.pitch{position:absolute;inset:auto 0 0 0;height:120px;background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.35),rgba(30,120,64,.55) 45%,rgba(10,42,24,.2) 75%);border-radius:50%/40%;border:1.5px solid rgba(255,255,255,.35);box-shadow:0 -10px 60px rgba(255,255,230,.18)}
+.fball{position:absolute;left:38%;bottom:50px;font-size:54px;filter:drop-shadow(0 8px 6px rgba(0,0,0,.5)) drop-shadow(0 0 18px rgba(255,255,255,.4))}
+.fheart{position:absolute;left:56%;bottom:92px;font-size:22px;animation:pulse 2.2s ease-in-out infinite;filter:drop-shadow(0 0 12px var(--red))}
+@keyframes pulse{50%{transform:scale(1.25)}}
+.fade{opacity:0;transition:opacity 2.5s ease 0.4s}.fade.in{opacity:1}
+.end h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,10vw,52px);font-weight:600;margin-bottom:14px}
+.end p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:#ffd9e2;max-width:330px;line-height:1.5}
+@media(prefers-reduced-motion:reduce){.ball,.hint,.stars i,.fheart,.mh{animation:none}.card p,.fade{transition:none}.heart{display:none}}
+</style></head><body>
+<div id="bg"><div class="stars" id="stars"></div></div>
+<div id="fx"></div>
+<main>
+<section>
+<div class="eyebrow">Full time? Never.</div>
+<h1>Happy<br>Birthday, <em>da</em></h1>
+<div class="sub">To my little brother, my forever favourite person ❤️</div>
+<div class="pitchline"></div>
+<button class="btn" onclick="document.getElementById('v').scrollIntoView({behavior:'smooth'})">Open your surprise ⚽</button>
+<div class="hint">scroll ↓</div>
+</section>
+
+<section id="v">
+<div class="vid"><video controls playsinline preload="metadata" src="video.mp4"></video></div>
+<div class="cap">Press play, da 🥹</div>
+</section>
+
+<section class="letter-wrap">
+<div class="card" id="card">
+<div class="hd"><span>⚽</span>For you, da</div>
+<p>To my little brother, my forever favourite person ❤️</p>
+<p>Happy Birthday, da! 🥹❤️</p>
+<p>I don't know if I tell you this enough, but you'll never truly understand how deeply you are loved or how much you mean to me.</p>
+<p>Life is going to change in so many ways. We'll grow up, get busy with our own lives, carry different responsibilities, and maybe we won't get to meet every day like we do now. But please remember one thing, da — distance and time can never change the bond we share.</p>
+<p>And listen, no matter what happens in your life, no matter which path you choose, whether things go the way you planned or life takes you somewhere completely unexpected, I'll always be there for you.</p>
+<p class="key">You don't have to achieve something big to make me proud of you. You don't have to prove anything to deserve my love.</p>
+<p>I want you to be happy, to take care of yourself, to grow into the person you want to be, and to know that you will always have someone standing beside you, quietly believing in you through it all.</p>
+<p>I'll be there to cheer for you when life feels beautiful, to encourage you when things get difficult, to protect you whenever I can, and to remind you of your worth when you forget it yourself.</p>
+<p>And one little thing I want you to promise me… 🥺</p>
+<p class="key">No matter how much life changes us, please don't ever forget me, da.</p>
+<p>Even if someday we're too busy to talk every day, even if life takes us to different places, never think that you're any less important to me. You will always be that special person in my life whom I will care for in ways words can never fully explain.</p>
+<p>I might not always be physically beside you, but my love, my prayers, and my support will always be with you. You can come to me with your happiness, your sadness, your failures, your fears, or even when you have absolutely nothing to say. You will never need to find the perfect words with me; your heart will always be enough.</p>
+<p class="key">You never have to face everything alone, da. ❤️</p>
+<p>As you grow older, I hope life gives you beautiful memories, genuine happiness, good people, and the courage to get through every difficult phase. And whatever happens, I hope you never forget how loved you are — not only on your happiest days, but especially on the days when you struggle to see your own light.</p>
+<p class="key">I'll always be rooting for you. In every phase. In every chapter. In every version of you.</p>
+<p>Happy Birthday, my boy. No matter how old you grow, you'll always have a special place in my heart that nobody else can take.</p>
+<p>Life may change a thousand things, but it will never change the fact that I'll always be here for you.</p>
+<p class="sign">Love you so much, da. Always and forever. 🫂❤️</p>
+</div>
+</section>
+
+<section class="end">
+<div class="scene"><div class="pitch"></div><div class="fball">⚽</div><div class="fheart">❤️</div></div>
+<div class="fade" id="endt"><h2>Happy Birthday, da</h2><p>Whatever comes, I'm right here. Always.</p></div>
+</section>
+</main>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var st=document.getElementById('stars'),i;
+for(i=0;i<28;i++){var s=document.createElement('i');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*40+'%';s.style.animationDelay=Math.random()*4+'s';st.appendChild(s)}
+var fx=document.getElementById('fx');
+if(!RM){
+for(i=0;i<4;i++){var b=document.createElement('div');b.className='ball';b.textContent='⚽';b.style.top=(15+Math.random()*70)+'%';b.style.animationDuration=(34+Math.random()*30)+'s';b.style.animationDelay=(-Math.random()*40)+'s';fx.appendChild(b)}
+var cols=['💗','❤️','🤍','🩷'],live=0;
+function spawn(){
+if(live<7&&!document.hidden){
+var h=document.createElement('span');h.className='heart'+(Math.random()<.25?' glow':'');
+h.textContent=cols[Math.floor(Math.random()*cols.length)];
+h.style.left=Math.random()*96+'%';h.style.fontSize=(9+Math.random()*9)+'px';
+h.style.setProperty('--dx',(Math.random()*60-30)+'px');
+var d=9+Math.random()*9;h.style.animationDuration=d+'s';
+fx.appendChild(h);live++;
+setTimeout(function(){h.remove();live--},d*1000);
+}
+setTimeout(spawn,900+Math.random()*1300);
+}
+spawn();
+}
+var ps=document.querySelectorAll('.card p'),card=document.getElementById('card');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=e.target;p.classList.add('in');io.unobserve(p);
+if(!RM){for(var k=0;k<2;k++){var m=document.createElement('span');m.className='mh';m.textContent=Math.random()<.5?'💗':'🤍';var r=p.getBoundingClientRect(),c=card.getBoundingClientRect();m.style.left=(Math.random()<.5?-4:c.width-14)+'px';m.style.top=(p.offsetTop+Math.random()*p.offsetHeight)+'px';card.appendChild(m);setTimeout(function(x){x.remove()}.bind(null,m),2700)}}}})},{threshold:.35});
+ps.forEach(function(p){if(RM)p.classList.add('in');else io.observe(p)});
+var et=document.getElementById('endt');
+new IntersectionObserver(function(es,o){if(es[0].isIntersecting){et.classList.add('in');o.disconnect()}},{threshold:.4}).observe(et);
+})();
+</script>
+</body></html>
